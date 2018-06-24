@@ -1,0 +1,75 @@
+<html>
+    <head>
+        <title>Begonia</title>
+                <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+		<script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+<script type="text/javascript" charset="utf-8">
+      function onBodyLoad() {
+        document.addEventListener("deviceready", onDeviceReady,
+          false);
+      }
+      function onDeviceReady() {
+        //Get the appInfo DOM element
+        var element = document.getElementById("appInfo");
+	 }
+      function playVibrate() {
+        var u = new SpeechSynthesisUtterance();
+        var x = document.getElementById("frm1");
+        var txt = "";
+        txt = x.elements[0].value
+        u.text = txt;
+        u.lang = 'es-MX';
+        speechSynthesis.speak(u);      
+        navigator.notification.vibrate(2000);
+        document.getElementById("frm1").reset();
+      }
+	  function hablar(frase) {
+        var u = new SpeechSynthesisUtterance();
+        u.text = frase;
+        u.lang = 'es-MX';
+        speechSynthesis.speak(u);      
+        navigator.notification.vibrate(2000);
+      }
+</script>		
+	
+        
+    </head>    
+    <body onload="hablar('Begonia. Es una planta muy fácil de cultivar en interior. Clima. Cálido y húmedo. Exposición. Soleada y semisombra. Es una planta que no tolera el frío, por lo que debe resguardarse de los vientos y las heladas.Siembra. Noviembre a enero. Temperatura 20-22oC. Las semillas se obtienen en otoño. Riego. Mantener la tierra siempre fresca. En verano son necesarios riegos más frecuentes.Floración. Finales de junio a octubre. Germinación en 10-14 días. Podemos encontrar diversas tonalidades: rojo, rosa y blanco. Cambio de maceta. 1 vez al año en invierno.Plagas y enfermedades. Podredumbre de las semillas, ácaros, mosca blanca, oídium y nematodos. Es importante mantener una ventilación adecuada para evitar enfermedades criptogámicas.')">
+        <div class="container">    
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="card" style="width: 18rem;">
+                      <img class="card-img-top" src="GIF/begonia.jpg" alt="Card image cap">
+                      <div class="card-body">
+                        <h1 class="card-title">BEGONIA</h1>
+                       <h3>Interior</h3>                       
+                        <p>Es una planta muy fácil de cultivar en interior.</p>
+
+                        <h3>Clima</h3>
+                        <p>Cálido y húmedo.</p>
+
+                        <h3>Exposición</h3>
+                        <p>Soleada y semisombra. Es una planta que no tolera el frío, por lo que debe resguardarse de los vientos y las heladas.
+</p>
+
+                        <h3>Riego</h3>
+                        <p>Mantener la tierra siempre fresca. En verano son necesarios riegos más frecuentes.
+
+                        </p>
+                        <h3>Floración</h3>
+                        <p>
+                          Finales de junio a octubre. Germinación en 10-14 días. Podemos encontrar diversas tonalidades: rojo, rosa y blanco.
+                        </p>
+                        <h3>Cambio de maceta</h3>
+                          <p>1 vez al año en invierno.</p>
+
+                        <h3>Plagas y enfermedades</h3>
+                        <p></p>
+                      </div> 
+                    </div>
+                
+                </div> <!--columnas 12-->            
+            </div>   <!--row-->            
+        </div> <!--container-->
+    </body>
+</html>      

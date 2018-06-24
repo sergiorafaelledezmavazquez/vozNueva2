@@ -1,0 +1,69 @@
+<html>
+    <head>
+        <title>Chamaedorea</title>
+                <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+<script type="text/javascript" charset="utf-8">
+      function onBodyLoad() {
+        document.addEventListener("deviceready", onDeviceReady,
+          false);
+      }
+      function onDeviceReady() {
+        //Get the appInfo DOM element
+        var element = document.getElementById("appInfo");
+	 }
+      function playVibrate() {
+        var u = new SpeechSynthesisUtterance();
+        var x = document.getElementById("frm1");
+        var txt = "";
+        txt = x.elements[0].value
+        u.text = txt;
+        u.lang = 'es-MX';
+        speechSynthesis.speak(u);      
+        navigator.notification.vibrate(2000);
+        document.getElementById("frm1").reset();
+      }
+	  function hablar(frase) {
+        var u = new SpeechSynthesisUtterance();
+        u.text = frase;
+        u.lang = 'es-MX';
+        speechSynthesis.speak(u);      
+        navigator.notification.vibrate(2000);
+      }
+</script>		
+	
+    </head>    
+    <body onload="hablar('Chamaedorea. Interior.Se le llama, palmera enana, ya que su crecimiento es muy lento. Es una de las palmeras más resistentes para interior. Tiene hojas compuestas por varios pares de largos folíolos, de entre 10 y 20 centímetros. Tiene un porte ligero y un , color verde claro.Clima.Húmedo. Zonas costeras cálidas a la sombra. No resiste el frío. Exposición. Sombra o semisombra. Riego.2 ó 3 veces por semana en verano y 1 vez al mes en invierno, sin llegar a encharcar la maceta. En épocas de mucho calor, pulverizar diariamente con agua. Cambio de maceta.Trasplantar todos los años a contenedores lo más alto posible. No utilizar un macetero demasiado grande. Plagas y enfermedades.Cochinillas, araña roja, hongos, etc.')">
+        <div class="container">    
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="card" style="width: 18rem;">
+                      <img class="card-img-top" src="GIF/chamadeorea.jpg" alt="Card image cap">
+                      <div class="card-body">
+                        <h1 class="card-title">CHAMADEOREA</h1>
+                       <h3>Interior</h3>                       
+                        <p>Se le llama, palmera enana, ya que su crecimiento es muy lento. Es una de las palmeras más resistentes para interior. Tiene hojas compuestas por varios pares de largos folíolos, de entre 10 y 20 centímetros. Tiene un porte ligero y un , color verde claro..</p>
+
+                        <h3>Clima</h3>
+                        <p>Húmedo.</p>
+
+                        <h3>Exposición</h3>
+                        <p>Sombra o semisombra.</p>
+
+                        <h3>Riego</h3>
+                        <p>
+                            2 ó 3 veces por semana en verano y 1 vez al mes en invierno, sin llegar a encharcar la maceta. En épocas de mucho calor, pulverizar diariamente con agua.
+                        </p>
+                          <h3>Cambio de maceta</h3>
+
+                        <h3>Plagas y enfermedades</h3>
+                       <p>Trasplantar todos los años a contenedores lo más alto posible. No utilizar un macetero demasiado grande. Cochinillas, araña roja, hongos, etc.</p> 
+</p>
+                      </div> 
+                    </div>
+                
+                </div> <!--columnas 12-->            
+            </div>   <!--row-->            
+        </div> <!--container-->
+    </body>
+</html>      
